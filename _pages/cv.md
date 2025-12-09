@@ -6,59 +6,32 @@ author_profile: true
 redirect_from:
   - /resume
 ---
+You can download my full CV here:
 
-{% include base_path %}
+- [Download CV](/files/cv.pdf)
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+---
+## Education
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+- **MSc Data Science and Public Policy (Hons)**, University College London, 2025–2026 (expected)  
+- **BSc Economics (Hons), First-Class** – University of Sussex, 2022–2025  
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+---
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## Research & technical focus
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+- Quantitative research with **Python, R, SQL and Stata**, building reproducible data pipelines and high-dimensional econometric models.   
+- Machine learning for text, time series and tabular data (classification, clustering, model diagnostics, visualisation).   
+- Policy-relevant empirical work on **carbon pricing, trade integration, and portfolio risk modelling**.   
+
+---
+
+## Selected projects
+
+- **Digital Infrastructure of Carbon Pricing and Trade** – mapping EU ETS/CBAM digital infrastructure and designing a cyber capacity-building framework for EU–Africa trade, combining gravity analysis with digital governance.   
+- **Gravity Model of Africa’s Bilateral Trade (PPMLHDFE)** – built a ~960k-observation CEPII panel and estimated PPML gravity models with rich fixed effects to quantify WTO and PTA effects on African trade flows.   
+- **Sentiment Analysis Pipeline (Python, NLTK)** – end-to-end NLP pipeline on movie reviews (pre-processing, TF-IDF, multiple classifiers, cross-validation, and error analysis).   
+- **Portfolio Risk Modelling** – factor models and non-parametric tests to analyse asset returns and volatility for portfolio construction.   
+
+
+_For full details, see the PDF CV above._
