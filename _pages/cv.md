@@ -8,7 +8,7 @@ redirect_from:
 ---
 You can download my full CV here:
 
-- [Download CV](/files/cv.pdf)
+- [Download CV](/files/CV.pdf)
 
 ---
 ## Education
