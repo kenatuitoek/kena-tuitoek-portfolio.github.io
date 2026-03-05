@@ -1,6 +1,6 @@
 # Site Settings
 locale                   : "en-US"
-site_theme               : "dark"
+site_theme               : "default"
 title                    : "Kena Tuitoek — Quantitative Research"
 title_separator          : "·"
 name                     : &name "Kena Tuitoek"
