@@ -1,0 +1,49 @@
+---
+layout: archive
+title: "Portfolio"
+permalink: /portfolio/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p style="font-size: 0.95em; opacity: 0.7; margin-bottom: 2em;">Each project includes methodology, code, and results. Click through for full detail.</p>
+
+<div class="portfolio-grid">
+{% for post in site.portfolio reversed %}
+  <div class="portfolio-card-full" style="margin-bottom: 1.5em; padding: 1.5em; border-left: 3px solid {% if post.accent_color %}{{ post.accent_color }}{% else %}#5B8DEF{% endif %}; background: var(--bg-secondary, rgba(255,255,255,0.02)); border-radius: 0 10px 10px 0; transition: transform 0.2s ease;">
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4em;">
+      {% if post.category_label %}<span style="font-size: 0.7em; font-family: monospace; text-transform: uppercase; letter-spacing: 1.5px; color: {% if post.accent_color %}{{ post.accent_color }}{% else %}#5B8DEF{% endif %};">{{ post.category_label }}</span>{% endif %}
+      {% if post.status %}<span style="font-size: 0.65em; font-family: monospace; text-transform: uppercase; letter-spacing: 1px; color: {% if post.status == 'In Progress' %}#FFB347{% else %}#64748B{% endif %};">{{ post.status }}</span>{% endif %}
+    </div>
+
+    <h2 style="margin: 0 0 0.3em; font-size: 1.25em;">
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink" style="text-decoration: none;">{{ post.title }}</a>
+    </h2>
+    
+    {% if post.tagline %}<p style="font-family: monospace; font-size: 0.82em; opacity: 0.5; margin: 0 0 0.8em;">{{ post.tagline }}</p>{% endif %}
+    
+    <p style="font-size: 0.9em; opacity: 0.75; margin-bottom: 1em; line-height: 1.6;">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+
+    {% if post.methods %}
+    <div style="margin-bottom: 0.8em;">
+      <span style="font-size: 0.7em; font-family: monospace; text-transform: uppercase; letter-spacing: 1px; opacity: 0.5;">Methods: </span>
+      <span style="font-size: 0.82em; opacity: 0.7;">{{ post.methods | join: " · " }}</span>
+    </div>
+    {% endif %}
+
+    {% if post.tools %}
+    <div style="display: flex; flex-wrap: wrap; gap: 0.4em;">
+      {% for tool in post.tools %}<code style="font-size: 0.72em; padding: 2px 8px; border-radius: 3px; background: var(--bg-secondary, rgba(255,255,255,0.05)); border: 1px solid var(--border-color, rgba(255,255,255,0.08));">{{ tool }}</code>{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+{% endfor %}
+</div>
+
+<div style="margin-top: 2em; padding: 1.2em; border-radius: 8px; background: var(--bg-secondary, rgba(255,255,255,0.02)); border: 1px solid var(--border-color, rgba(255,255,255,0.06));">
+  <p style="font-size: 0.85em; opacity: 0.6; margin: 0;">
+    <strong>Adding a new project?</strong> Drop a new <code>.md</code> file into <code>_portfolio/</code> with the front matter fields: <code>title</code>, <code>excerpt</code>, <code>category_label</code>, <code>status</code>, <code>accent_color</code>, <code>tagline</code>, <code>methods</code>, <code>tools</code>. It will appear here automatically.
+  </p>
+</div>

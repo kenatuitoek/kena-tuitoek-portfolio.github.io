@@ -1,0 +1,12 @@
+main:
+  - title: "Portfolio"
+    url: /portfolio/
+    display: true
+
+  - title: "Research"
+    url: /research/
+    display: true
+
+  - title: "CV"
+    url: /cv/
+    display: true
